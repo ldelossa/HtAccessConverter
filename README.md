@@ -24,5 +24,5 @@ $ python3.4 HtAccessConverter -f '~/HtAccessConverter/HtAccessConverter/contrib/
 ```
 #### Json configuration
 ```
-$ python3.4 HtAccessConverter -json
+$ python3.4 HtAccessConverter --json
 ```
