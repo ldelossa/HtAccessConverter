@@ -1,4 +1,4 @@
-# HtAccessConveter
+# HtAccessConverter
 
 This tool is used to parse apache .htaccess rules and convert them into nginx server blocks. A few assumptions are made about your .htaccess file
 
