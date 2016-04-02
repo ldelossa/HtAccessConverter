@@ -43,17 +43,21 @@ if __name__ == "__main__":
         #validate confid.json is located in ./config/
         config_file = os.path.abspath('HtAccessConverter/HtAccessConverter/config/config.json')
 
+        if not os.path.isfile(config_file):
+            print("No json configuration found in ./HtAccessConverter/config/")
+            sys.exit(1)
+
         with open(config_file, 'r') as config_json:
             config = json.load(config_json)
 
         for config_dict in config['config']:
             if config_dict['path'].split('/')[-1] != ".htaccess":
                 print("You have not specified a .htaccess file in your json configuration")
-                sys.exit(0)
+                sys.exit(1)
 
             if not os.path.isfile(config_dict['path']):
                 print("You have not specified a valid .htaccess file in your json configuration, does it exist?")
-                sys.exit(0)
+                sys.exit(1)
 
 
             AC = Access(config_dict['path'])
@@ -83,16 +87,16 @@ if __name__ == "__main__":
             -l | --listen       The string that follows the listen directive of an nginx server block"""
             )
 
-            sys.exit(0)
+            sys.exit(1)
 
         #file level checks
         if file.split('/')[-1] != ".htaccess":
             print("You have not specified a .htaccess file")
-            sys.exit(0)
+            sys.exit(1)
 
         if not os.path.isfile(file):
             print("You have not specified a valid .htaccess file, does it exist?")
-            sys.exit(0)
+            sys.exit(1)
 
         #instantiate htaccess parser object, parse the file passed in
         AC = Access(file)
