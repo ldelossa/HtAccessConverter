@@ -18,19 +18,19 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        '--json', action='store_true'
+        '--json', action='store_true', help="Run in json-batch mode, must have HtAccessConverter/config/config.json present"
     )
 
     parser.add_argument(
-        '-s', '--server', type=str
+        '-s', '--server', type=str, help="Server name for server_name directive in nginx server block"
     )
 
     parser.add_argument(
-        '-l', '--listen', type=str
+        '-l', '--listen', type=str, help="The string that follows the listen directive of an nginx server block"
     )
 
     parser.add_argument(
-        '-f', '--file', type=str
+        '-f', '--file', type=str, help="The absolute path to the .htaccess file, file must be named .htaccess for validation"
     )
 
     args = parser.parse_args()

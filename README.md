@@ -5,6 +5,7 @@ This tool is used to parse apache .htaccess rules and convert them into nginx se
 - Right now, HtAccessConverter only supports the following apache directives: RewriteRule, RedirectMatch, and Redirect
 - HtAccessConverter expects your .htaccess file represents matches on a single hostname. I.e all rewriting is occuring after www.example.com/
 - HtAccessConverter assumes all .htaccess flags are [L], and resprents this with the appropriate break; command in nginx
+- HtAccessConverter will simply ignore other directives in the .htaccess file. As time goes on, support for directives will increase
 
 ## Requirements:
 This is a pure-python solution. It's writen in python3.4. You only need to provide the .htaccess file.
