@@ -1,12 +1,12 @@
 {
   "config":[
     {
-      "path": "/tmp/HtAccessConverter/HtAccessConverter/contrib/.htaccess",
+      "path": "",
       "server_name": "example.com",
       "listen_directive": "80"
     },
     {
-      "path": "/tmp/HtAccessConverter/HtAccessConverter/contrib/.htaccess",
+      "path": "",
       "server_name": "example1.com",
       "listen_directive": "80"
     }
